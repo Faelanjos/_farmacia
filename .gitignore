@@ -1,0 +1,31 @@
+# Ambiente virtual
+venv/
+env/
+
+# Arquivo do banco de dados SQLite
+db.sqlite3
+
+# Arquivos de migração (opcional)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos do VS Code
+.vscode/
+
+# Logs e arquivos temporários
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Arquivos de upload/mídia temporários
+media/
