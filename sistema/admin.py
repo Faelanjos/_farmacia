@@ -22,6 +22,16 @@ class ClienteAdmin(admin.ModelAdmin):
 
 @admin.register(models.Medicamento)
 class MedicamentoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'preço', 'receita')
-    list_editable = ('receita',)
+    list_display = ('id', 'nome', 'preço', 'receita', 'op_desconto',)
+    list_editable = ('receita','op_desconto',)
+    search_fields = ('id', 'nome',)
+
+
+@admin.register(models.Plano_de_Saude)
+class Plano_de_SaudeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome',)
+
+@admin.register(models.Fornecedor)
+class FornecedorAdmin(admin.ModelAdmin):
+    list_display = ('id', 'nome', 'cnpj',)
     search_fields = ('id', 'nome',)
