@@ -22,7 +22,7 @@ class ClienteAdmin(admin.ModelAdmin):
 
 @admin.register(models.Medicamento)
 class MedicamentoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'preço', 'receita', 'op_desconto',)
+    list_display = ('id', 'nome', 'preco', 'receita', 'op_desconto',)
     list_editable = ('receita','op_desconto',)
     search_fields = ('id', 'nome',)
 
