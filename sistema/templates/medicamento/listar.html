@@ -16,7 +16,7 @@
             <tbody>
                 {% for medicamento in medicamentos %}
                     <tr class="table-row">
-                        <td class="table-cel">{{medicamento.id}}</td>
+                        <td class="table-cel"><a class="table-link" href=" {% url 'sistema:perfilMedicamento' medicamento.id %}">{{medicamento.id}}</a></td>
                         <td class="table-cel">{{medicamento.nome}}</td>
                         <td class="table-cel">{{medicamento.preco}}</td>
                         <td class="table-cel">{{medicamento.estoque}}</td>

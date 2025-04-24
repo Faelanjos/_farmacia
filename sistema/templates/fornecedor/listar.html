@@ -13,9 +13,9 @@
                 </tr>
             </thead>
             <tbody>
-                {% for cliente in clientes %}
+                {% for fornecedor in fornecedores %}
                     <tr class="table-row">
-                        <td class="table-cel">{{fornecedor.id}}</td>
+                        <td class="table-cel"><a class="table-link" href=" {% url 'sistema:perfilFornecedor' fornecedor.id %}">{{fornecedor.id}}</a></td>
                         <td class="table-cel">{{fornecedor.nome}}</td>
                         <td class="table-cel">{{fornecedor.cnpj}}</td>
                     </tr>

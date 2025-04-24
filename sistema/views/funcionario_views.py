@@ -34,3 +34,22 @@ def criarFuncionario(request):
         'funcionario/cadastro.html',
         {'form': form}
     )
+
+#View referente aos detalhes(perfil) do funcionario
+def perfilFuncionario(request, funcionario_id):
+    funcionarioUnico = get_object_or_404( #método utilizado para mostrar o funcionario ou exibir erro 404
+        Funcionario, pk=funcionario_id #funcionario é o model, pc=funcionario_id está definido através de qual campo(coluna) o objeto será retornado
+    )
+    titulo = f'{funcionarioUnico.nome} {funcionarioUnico.sobrenome}' #Cria um título com nome e sobranome do funcionario atual
+    context = { #declaração de um dict que possui a chave funcionarios e o valor funcionarios (variavel criada acima)
+        'funcionarioUnico' : funcionarioUnico,
+        'titulo': titulo,
+    }
+
+
+    return render(
+        request,
+        'funcionario/perfil.html',
+        context,
+
+    )

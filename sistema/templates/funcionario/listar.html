@@ -18,7 +18,7 @@
             <tbody>
                 {% for funcionario in funcionarios %}
                     <tr class="table-row">
-                        <td class="table-cel">{{funcionario.id}}</td>
+                        <td class="table-cel"><a class="table-link" href=" {% url 'sistema:perfilFuncionario' funcionario.id %}">{{funcionario.id}}</a></td>
                         <td class="table-cel">{{funcionario.nome}}</td>
                         <td class="table-cel">{{funcionario.sobrenome}}</td>
                         <td class="table-cel">{{funcionario.email}}</td>
